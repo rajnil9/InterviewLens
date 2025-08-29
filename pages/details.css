@@ -1,0 +1,182 @@
+/* General Page Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #2377e6, #2c2c6c);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main Container */
+.container {
+  width: 90%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect Without Blur */
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Title */
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+/* Home Link */
+.home-link {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease-in-out;
+}
+
+.home-link:hover {
+  color: #ffd700;
+  text-shadow: 0px 0px 10px rgba(255, 204, 0, 0.7);
+}
+
+/* Job Details */
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.details p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0;
+  transition: color 0.3s ease-in-out; /* Smooth text color transition */
+}
+
+/* Highlight Labels */
+.details p strong {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* QR Code Section */
+.qr-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* QR Code Canvas */
+#qr-code {
+  width: 150px;
+  height: 150px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Scan Button */
+.scan-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  background: #00c853;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.scan-btn:hover {
+  background: #009624;
+  transform: scale(1.05);
+}
+
+.scan-btn i {
+  font-size: 20px;
+}
+
+/* LinkedIn Button */
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  background: #0077b5;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.linkedin-btn:hover {
+  background: #005f90;
+  transform: scale(1.05);
+}
+
+.linkedin-btn i {
+  font-size: 20px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between image and name */
+  margin: 15px 0;
+  justify-content: center; /* Centers content */
+}
+
+.profile-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}

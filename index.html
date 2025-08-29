@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterviewLens</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body>
+    <header>
+
+ 
+        <div class="container">
+            <div class="logo">
+                <h1>Interview<span>Lens</span></h1>
+              
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#experiences">Experiences</a></li>
+                    <li><a href="#companies">Companies</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="devcrew page/devcrew.html">DevCrew</a></li>
+                 
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="index2.html">
+                <button class="btn btn-primary">Get Started</button>
+                </a>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button id="dark-mode-toggle" class="dark-mode-btn">
+                <i id="dark-icon" class="dark-icon">🌙</i>
+            </button>
+            
+            
+        </div>
+    </header>
+
+    <section class="hero reveal">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Share Your Interview Journey</h1>
+                <p>Help others prepare by sharing your interview experiences at top companies</p>
+                <!--- <button class="btn btn-primary btn-large">Share Your Experience</button> -->
+                <button class="btn btn-primary btn-large" id="share-experience-btn">Share Your Experience</button>
+
+
+            </div>
+            <div class="hero-image">
+                <img src="banner.png" alt="Interview Illustration">
+            </div>
+        </div>
+    </section>
+
+    <section class="stats reveal">
+        <div class="container">
+            <div class="stat-item">
+                <h2>1,200+</h2>
+                <p>Interview Experiences</p>
+            </div>
+            <div class="stat-item">
+                <h2>500+</h2>
+                <p>Companies</p>
+            </div>
+            <div class="stat-item">
+                <h2>10,000+</h2>
+                <p>Community Members</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiences" class="experiences reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recent Experiences</h2>
+                <div class="filter-container">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search by company or position...">
+                        <button class="search-btn">Search</button>
+                    </div>
+                    <div class="">
+                        <select id="company-filter">
+                            <option value="">All Companies</option>
+                            <option value="google">Google</option>
+                            <option value="microsoft">Microsoft</option>
+                            <option value="amazon">Amazon</option>
+                            <option value="apple">Apple</option>
+                            <option value="meta">Meta</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-grid">
+                <!-- Experience Card 1 -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <img src="images/google.png" alt="Google Logo" class="company-logo">
+                        <div class="card-meta">
+                            <h3>Software Engineer Interview</h3>
+                            <div class="company-name">Google</div>
+                            <div class="experience-date">March 15, 2025</div>
+                        </div>
+                        <div class="experience-result success">Offer Received</div>
+                    </div>
+                    <div class="card-content">
+                        <p>My interview process at Google consisted of 5 rounds: initial screening, 2 technical interviews, a system design round, and a behavioral interview. The technical questions focused on data structures, algorithms, and problem-solving skills.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="difficulty">
+                            <span class="label">Difficulty:</span>
+                            <span class="rating">
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <button class="btn btn-outline" onclick="redirectToDetails(
+    'Google', 
+    'Software Engineer', 
+    'March 15, 2025', 
+    'Offer Received', 
+    'https://linkedin.com/in/example', 
+    'My interview process at Google consisted of 5 rounds...'
+);">
+    Read More
+</button>
+
+                    </div>
+                </div>
+
+                <!-- Experience Card 2 -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <img src="images/microsoft.png" alt="Microsoft Logo" class="company-logo">
+                        <div class="card-meta">
+                            <h3>Product Manager Interview</h3>
+                            <div class="company-name">Microsoft</div>
+                            <div class="experience-date">February 28, 2025</div>
+                        </div>
+                        <div class="experience-result success">Offer Recieved</div>
+                    </div>
+                    <div class="card-content">
+                        <p>The Microsoft PM interview was a full day with 5 different interviewers. Questions ranged from product design, strategy, technical understanding, and behavioral scenarios. The team was friendly and the process was well-organized.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="difficulty">
+                            <span class="label">Difficulty:</span>
+                            <span class="rating">
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <button class="btn btn-outline" onclick="redirectToDetails(
+                            'Google', 
+                            'Software Engineer', 
+                            'March 15, 2025', 
+                            'Offer Received', 
+                            'https://linkedin.com/in/example', 
+                            'My interview process at Google consisted of 5 rounds...'
+                        );">
+                            Read More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Experience Card 3 -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <img src="images/amazon.webp" alt="Amazon Logo" class="company-logo">
+                        <div class="card-meta">
+                            <h3>Data Scientist Interview</h3>
+                            <div class="company-name">Amazon</div>
+                            <div class="experience-date">Feb 2, 2025</div>
+                        </div>
+                        <div class="experience-result rejected">No Offer</div>
+                    </div>
+                    <div class="card-content">
+                        <p>The Amazon interview process was intense. It started with an online assessment, followed by a phone screen and then an onsite with 5 back-to-back interviews. They focused heavily on their leadership principles and technical skills.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="difficulty">
+                            <span class="label">Difficulty:</span>
+                            <span class="rating">
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                            </span>
+                        </div>
+                        <button class="btn btn-outline" onclick="redirectToDetails(
+    'Google', 
+    'Software Engineer', 
+    'March 15, 2025', 
+    'Offer Received', 
+    'https://linkedin.com/in/example', 
+    'My interview process at Google consisted of 5 rounds...'
+);">
+    Read More
+</button>
+                    </div>
+                </div>
+
+                <!-- Experience Card 4 -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <img src="images/meta.webp" alt="Meta Logo" class="company-logo">
+                        <div class="card-meta">
+                            <h3>Frontend Engineer Interview</h3>
+                            <div class="company-name">Meta</div>
+                            <div class="experience-date">Jan 10, 2025</div>
+                        </div>
+                        <div class="experience-result success">Offer Received</div>
+                    </div>
+                    <div class="card-content">
+                        <p>Meta's interview process was comprehensive. After the initial screening, I had a technical phone interview followed by a virtual onsite with 4 interviews. The questions covered JavaScript, React, CSS, and system design.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="difficulty">
+                            <span class="label">Difficulty:</span>
+                            <span class="rating">
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <button class="btn btn-outline" onclick="redirectToDetails(
+                            'Google', 
+                            'Software Engineer', 
+                            'March 15, 2025', 
+                            'Offer Received', 
+                            'https://linkedin.com/in/example', 
+                            'My interview process at Google consisted of 5 rounds...'
+                        );">
+                            Read More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more">
+                <button class="btn btn-secondary">Load More Experiences</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="share-experience">
+        <div class="container">
+            <div class="share-content">
+                <h2>Share Your Interview Experience</h2>
+                <p>Help others prepare better by sharing your interview journey. Your insights could be the key to someone else's success!</p>
+                <button class="btn btn-primary btn-large" id="open-form-btn">Share Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="companies" class="top-companies">
+        <div class="container">
+            <h2>Top Companies</h2>
+            <div class="companies-grid">
+                <div class="company-card">
+                    <img src="images/google.png" alt="Google">
+                    <h3>Google</h3>
+                    <p>125 experiences</p>
+                </div>
+                <div class="company-card">
+                    <img src="images/microsoft.png" alt="Microsoft">
+                    <h3>Microsoft</h3>
+                    <p>98 experiences</p>
+                </div>
+                <div class="company-card">
+                    <img src="images/amazon.webp" alt="Amazon">
+                    <h3>Amazon</h3>
+                    <p>112 experiences</p>
+                </div>
+                <div class="company-card">
+                    <img src="images/apple.png" alt="Apple">
+                    <h3>Apple</h3>
+                    <p>87 experiences</p>
+                </div>
+                <div class="company-card">
+                    <img src="images/meta.webp" alt="Meta">
+                    <h3>Meta</h3>
+                    <p>76 experiences</p>
+                </div>
+                <div class="company-card">
+                    <img src="images/linkedin.webp" alt="LinkedIn">
+                    <h3>LinkedIn</h3>
+                    <p>65 experiences</p>
+                </div>
+            </div>
+            <div class="view-all">
+                <button class="btn btn-secondary">View All Companies</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>About InterviewLens</h2>
+                <p>InterviewLens was created with a simple mission: to help job seekers prepare better for interviews by learning from others' experiences. Our community-driven platform allows professionals to share their interview journeys, helping others navigate the often stressful interview process.</p>
+                <p>Whether you're preparing for your first job interview or looking to switch to a new company, our platform provides valuable insights into what to expect and how to prepare.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Interview<span>Lens</span></h2>
+                    <p>Sharing interview experiences to help you succeed</p>
+                    
+                    <br> 
+        
+                    <h3>Team INTMAIN()</h3> 
+                    <br>
+                     <h3>Hack Storm 2.25</h3>
+                </div>
+            </div>
+        </div>
+        
+                
+                       
+
+
+
+
+
+
+
+
+
+
+
+        
+    </footer>
+
+    <!-- Modal for submitting experience -->
+    <div class="modal" id="experience-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Share Your Interview Experience</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="experience-form">
+                    <div class="form-group">
+                        <label for="company">Company Name*</label>
+                        <input type="text" id="company" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="position">Position Applied For*</label>
+                        <input type="text" id="position" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Interview Date*</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="result">Interview Result*</label>
+                        <select id="result" required>
+                            <option value="">Select Result</option>
+                            <option value="offer">Received Offer</option>
+                            <option value="rejected">No Offer</option>
+                            <option value="waiting">Waiting for Response</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="difficulty">Interview Difficulty (1-5)*</label>
+                        <div class="rating-input">
+                            <span class="rating-star" data-value="1"></span>
+                            <span class="rating-star" data-value="2"></span>
+                            <span class="rating-star" data-value="3"></span>
+                            <span class="rating-star" data-value="4"></span>
+                            <span class="rating-star" data-value="5"></span>
+                        </div>
+                        <input type="hidden" id="difficulty" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Interview Experience*</label>
+                        <textarea id="experience" rows="6" required placeholder="Describe your interview process, questions asked, and any advice for others..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="tips">Tips for Other Candidates</label>
+                        <textarea id="tips" rows="4" placeholder="Share any preparation tips or resources that helped you..."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline" id="cancel-btn">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit Experience</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+   
+
+    <script src="script.js"></script>
+</body>
+</html>
